@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+</head>
+<body>
+  <!-- Create a placeholder where your Elm app will live. Usually a div -->
+  <div id="elm-app"></div>
+
+  <!-- Pull in the Elm-generated JS code that represents the app -->
+  <script src="elm.js"></script>
+
+  <!--
+  Grab the elm-app element and tell the Elm runtime to embed your app
+  inside it. The `Elm` object is the standard way to interact with your
+  Elm app from JavaScript. We'll be using it later in the interop examples.
+
+  Elm.Main refers to the Main module we created. Note the capital 'M'.
+  -->
+  <script>
+    var elmElement = document.getElementById('elm-app');
+    Elm.embed(Elm.Main, elmElement);
+  </script>
+</body>
+</html>
