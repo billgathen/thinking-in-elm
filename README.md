@@ -12,7 +12,7 @@ When you make a change to one of the `.elm` files in any of the examples, run th
 
 `elm-make Main.elm`
 
-That will re-build the Elm application and store it in `elm.js` so the `index.html` page can find it.
+Accept any default it asks you about. That will re-build the Elm application and store it in `elm.js` so the `index.html` page can find it.
 
 To try the examples on your local machine, run this command in your terminal in the main directory for the example:
 
