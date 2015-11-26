@@ -10,9 +10,9 @@ _NOTE: I don't have instructions for doing Elm development on Windows, but the c
 
 When you make a change to one of the `.elm` files in any of the examples, run this command in your terminal, in the main directory for the example:
 
-`elm-make Main.elm`
+`elm make Main.elm --output elm.js`
 
-Accept any default it asks you about. That will re-build the Elm application and store it in `elm.js` so the `index.html` page can find it.
+That will re-build the Elm application and store it in `elm.js` so the `index.html` page can find it.
 
 To try the examples on your local machine, run this command in your terminal in the main directory for the example:
 
@@ -21,5 +21,6 @@ To try the examples on your local machine, run this command in your terminal in 
 ## The Steps
 
 1. [Hello World](1_hello_world/)
+1. [The Elm Architecture](2_the_elm_architecture)
 
 [LICENSE](LICENSE)
