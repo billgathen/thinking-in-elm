@@ -8,6 +8,10 @@ _NOTE: I don't have instructions for doing Elm development on Windows, but the c
 1. [Install Elm](http://elm-lang.org/install)
 1. `git clone https://github.com/billgathen/elm-step-by-step.git`
 
+Each project has been compiled, so to try the examples on your local machine, run this command in your terminal in the main directory for the example:
+
+`open index.html`
+
 When you make a change to one of the `.elm` files in any of the examples, run this command in your terminal, in the main directory for the example:
 
 `elm make Main.elm --output elm.js`
@@ -16,9 +20,6 @@ That will re-build the Elm application and store it in `elm.js` so the `index.ht
 
 The first time you build one of the projects, Elm needs to pull down all the dependencies: accept the defaults for all the questions it asks you.
 
-To try the examples on your local machine, run this command in your terminal in the main directory for the example:
-
-`open index.html`
 
 ## The Steps
 
