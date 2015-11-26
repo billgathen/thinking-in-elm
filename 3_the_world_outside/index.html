@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Elm Architecture: "Like" page</title>
+  <title>The Elm Architecture: JavaScript Interop</title>
 </head>
 <body>
-  <!-- Create a placeholder where your Elm app will live. Usually a div -->
   <div id="elm-app"></div>
+  <button id="js-like">JavaScript can like too!</button>
+  <br>
+  <small>Open devtools to monitor the likes in the console</small>
 
-  <!-- Pull in the Elm-generated JS code that represents the app -->
   <script src="elm.js"></script>
-
-  <!--
-  Grab the elm-app element and tell the Elm runtime to embed your app
-  inside it. The `Elm` object is the standard way to interact with your
-  Elm app from JavaScript. We'll be using it later in the interop examples.
-
-  Elm.Main refers to the Main module we created. Note the capital 'M'.
-  -->
   <script>
     var elmElement = document.getElementById('elm-app');
-    Elm.embed(Elm.Main, elmElement);
+    var elm = Elm.embed(Elm.Main, elmElement, { jsLikes: "Like" });
+    
+    // Log to the console whenever logger detects a new message
+    elm.ports.logger.subscribe(function(msg) {
+      console.log(msg);
+    });
+
+    // Send a like to Elm's jsLikes port on button click
+    var jsLikeButton = document.getElementById('js-like');
+    jsLikeButton.addEventListener("click", function() {
+      elm.ports.jsLikes.send("Like");
+    });
   </script>
 </body>
 </html>
