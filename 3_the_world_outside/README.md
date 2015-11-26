@@ -4,11 +4,11 @@ The Elm Architecture is great, but often we need to do things outside the model-
 
 ## Effects
 
-Anything that happens outside the model-update-view function is a *side-effect*. Elm offers a parallel data flow using a library called `Effects`. StartApp (as opposed to StartApp.Simple, which we used in the [Elm Architecture example](../2_the_elm_architecture)) allows us to send requests into the Effects flow during the update phase and it sends any results back into the Elm Architecture flow as a new action. These actions are treated exactly the same as any other action, so it integrate seamlessly with the rest of the Elm Architecture.
+Anything that happens outside the model-update-view function is a *side-effect*. Elm offers a parallel data flow using a library called `Effects`. StartApp (as opposed to StartApp.Simple, which we used in the [Elm Architecture example](../2_the_elm_architecture)) allows us to send requests into the Effects flow during the update phase and receive any results in the Elm Architecture flow as a new action. These actions are treated exactly the same as any other action, so it integrates seamlessly with the rest of the Elm Architecture.
 
 ## Ports
 
-Effects don't execute in the main flow of our program: they are passed to `ports`, which are isolated connectors to the world outside the Elm Architecture.
+Effects don't execute in the main flow of our program. They are passed to a `port`: an isolated connector to the world outside the Elm Architecture.
 
 ## Effects into Actions
 
@@ -18,7 +18,7 @@ A gotcha is that the `update` function requires an Action as input, but Effects 
 
 For example, using the [Http.get](https://github.com/evancz/elm-http) function to talk to an API might return a chunk of JSON which must be decoded before it can be used, then that result needs to be wrapped in an Action that `update` knows how to handle.
 
-Our example doesn't need to decode any JSON, but it does need to manually-convert the string sent by JavaScript to a Like action.
+Our example doesn't need to decode any JSON, but it does need to manually-convert the string sent by JavaScript to a `Like` action.
 
 ## Signals
 
@@ -26,7 +26,7 @@ Another new concept is `Signals`, which are values that can change over time. Th
 
 Inputs and outputs to ports are signals, so to tie into them we need to connect our update to them explicitly.
 
-## The Flow
+## The Effects Flow (Outgoing)
 
 To log our actions out to JavaScript, we add a `log` hook to our `update` function, which wraps the Effect-creation logic. To get the hook, we [partially-apply](https://en.wikipedia.org/wiki/Partial_application) the `update` function when we supply it to `StartApp.start`. This stores the logger (which also partially-applied) in a single-argument form that we can call easily from inside the `update` function.
 
@@ -40,7 +40,9 @@ The `logger` port is our outgoing connection to the outside world. The body of a
 
 Switching to `index.html` for a moment, we can see how to grab data from Elm signals using `subscribe`. `elm.ports.logger.subscribe` means "execute the following JS callback whenever the Elm port named `logger` emits a new value". The data supplied by the port will be available as the first argument to the function, and we can treat it as a normal JavaScript value from there. Here, we echo it to the console.
 
-Just below this code is a `elm.ports.jsLikes.send("Like")` call. This send the string "Like" to the Elm port named `jsLikes` every time the `js-like` JavaScript button is clicked.
+## The Effects Flow (Incoming)
+
+Remaining in `index.html` for another moment, just below this code is a `elm.ports.jsLikes.send("Like")` call. This send the string "Like" to the Elm port named `jsLikes` every time the `js-like` JavaScript button is clicked.
 
 Note that Elm does not execute JavaScript code and JavaScript does not execute Elm code. They merely transmit messages back and forth, leaving the destination system to determine the correct response.
 
