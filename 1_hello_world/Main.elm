@@ -1,6 +1,6 @@
 module Main where
 
-import Html exposing (..)
+import Html
 
 main =
-  text "Hello world from Elm!"
+  Html.text "Hello world from Elm!"
