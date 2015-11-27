@@ -2,7 +2,7 @@
 
 I've glossed-over a lot of the details of how Elm works in order to focus on the particular parts I found most-difficult to grasp. There are many excellent resources to fill in the gaps and make you a well-rounded Elm coder.
 
-The [Try Elm](http://elm-lang.org/try) app has a link to dozens of examples focused on specific tasks you might want to accomplish with Elm: have a wander through them and have fun fiddling with the code in the online editor.
+The [Try Elm](http://elm-lang.org/try) app has a link to dozens of examples focused on specific tasks you might want to accomplish with Elm: spend some time wandering through them and have fun fiddling with the code in the online editor.
 
 I got started with Elm by going through the video tutorials from [Pragmatic Studio](https://pragmaticstudio.com/) and I can't recommend them highly-enough. They're paid resources, but well worth it IMHO. Work through them both.
 
