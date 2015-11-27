@@ -6,6 +6,7 @@ A series of experiments exploring the Elm language and how it can play nice with
 1. [Hello World](1_hello_world/)
 1. [The Elm Architecture](2_the_elm_architecture)
 1. [The World Outside](3_the_world_outside)
+1. [Going Deeper](4_going_deeper)
 
 ## Playing with the examples
 

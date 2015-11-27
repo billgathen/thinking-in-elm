@@ -11439,7 +11439,7 @@ Elm.Main.make = function (_elm) {
               _U.list([A2($Html$Events.onClick,address,Reset)]),
               _U.list([$Html.text("Reset")]))]));
    });
-   var likesFromJs = A2($Signal.map,
+   var jsLikesActions = A2($Signal.map,
    function (str) {
       return Like;
    },
@@ -11461,7 +11461,7 @@ Elm.Main.make = function (_elm) {
    var app = $StartApp.start({init: initModel
                              ,update: updateWithLogging
                              ,view: view
-                             ,inputs: _U.list([likesFromJs])});
+                             ,inputs: _U.list([jsLikesActions])});
    var main = app.html;
    var tasks = Elm.Native.Task.make(_elm).performSignal("tasks",
    app.tasks);
@@ -11478,5 +11478,5 @@ Elm.Main.make = function (_elm) {
                              ,app: app
                              ,main: main
                              ,outbox: outbox
-                             ,likesFromJs: likesFromJs};
+                             ,jsLikesActions: jsLikesActions};
 };

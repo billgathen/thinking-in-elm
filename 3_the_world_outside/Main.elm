@@ -74,7 +74,7 @@ app =
     { init = initModel
     , update = updateWithLogging
     , view = view
-    , inputs = [ likesFromJs ] -- External signals that we want to affect our app!
+    , inputs = [ jsLikesActions ] -- External signals that we want to affect our app!
     }
 
   
@@ -103,6 +103,6 @@ port tasks =
 port jsLikes : Signal String
 
 
-likesFromJs : Signal Action
-likesFromJs =
+jsLikesActions : Signal Action
+jsLikesActions =
   Signal.map (\str -> Like) jsLikes
