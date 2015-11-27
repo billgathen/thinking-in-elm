@@ -26,12 +26,6 @@ Another new concept is `Signals`, which are values that can change over time. Th
 
 Inputs and outputs to ports are signals, so to tie into them we need to connect our update to them explicitly.
 
-## Type Annotations
-
-A quick aside about all those `outbox : Signal.Mailbox String` and `port tasks : Signal (Task Never ())` lines in the Signals section: those are [type annotations](http://www.cultivatehq.com/posts/phoenix-elm-5/), which are optional in most Elm definitions, but required when you're defining signals, so Elm knows precisely what kind of data will be flowing through the system.
-
-I generally prefer to have annotations for every function, because `explicit > implicit`, but this example is large enough already, so I've only used them where they're required.
-
 ## The Effects Flow (Outgoing)
 
 To log our actions out to JavaScript, we add a `log` hook to our `update` function, which wraps the Effect-creation logic. To get the hook, we [partially-apply](https://en.wikipedia.org/wiki/Partial_application) the `update` function when we supply it to `StartApp.start`. This stores the logger (which is also partially-applied) in a single-argument form that we can call easily from inside the `update` function.
@@ -59,3 +53,9 @@ Incoming ports don't need a body, just a declaration that defines what type of d
 However, the `jsLikes` signal emits strings, not actions. The `jsLikesActions` signal listens to the `jsLikes` signal and uses `Signal.map` to replace whatever comes in from the port with a `Like` action. In this example, we don't care about the actual value passed back by jsLikes, but if we did, we could include it in our Action and `update` would receive it just like any other action.
 
 The final piece to the puzzle is a new argument to `StartApp.start`: the `inputs` array. This contains any signals that we want routed into the model-update-view workflow, so we add the jsLikesActions signal here. Anything emitted by the signals in this list will be dropped directly into the `update` function as the action, which is why we needed to convert it from a string into a `Like` action beforehand.
+
+## Type Annotations
+
+A quick aside about all those `outbox : Signal.Mailbox String` and `port tasks : Signal (Task Never ())` lines in the Signals section: those are [type annotations](http://www.cultivatehq.com/posts/phoenix-elm-5/), which are optional in most Elm definitions, but required when you're defining signals, so Elm knows precisely what kind of data will be flowing through the system.
+
+I generally prefer to have annotations for every function, because `explicit > implicit`, but this example is large enough already, so I've only used them where they're required.
