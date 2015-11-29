@@ -40,13 +40,9 @@ update log action model =
 
 
 log outbox message =
-  let
-    sendMessageTask =
-      Signal.send outbox.address (toString message)
-    logAction =
-      Task.map (\n -> NoOp) sendMessageTask
-  in
-    Effects.task logAction
+  Signal.send outbox.address (toString message)
+  |> Task.map (\m -> NoOp)
+  |> Effects.task
     
 
 -- VIEW

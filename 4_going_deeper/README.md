@@ -9,7 +9,7 @@ I got started with Elm by going through the video tutorials from [Pragmatic Stud
 - [Elm: Building Reactive Web Apps](https://pragmaticstudio.com/elm)
 - [Elm: Signals, Mailboxes and Ports](https://pragmaticstudio.com/elm-signals)
 
-Alan Gardner at [CultivateHQ](http://www.cultivatehq.com) has a terrific blog series about integrating the [Phoenix web framework](http://www.cultivatehq.com/posts/phoenix-elm-1/) with Elm. Even if you're not interested in Phoenix and Elixir (though I certainly am!), it's a great on-ramp to Elm as well.
+Alan Gardner at [CultivateHQ](http://www.cultivatehq.com) has a [terrific blog series](http://www.cultivatehq.com/posts/phoenix-elm-1/) about integrating the [Phoenix web framework](http://www.phoenixframework.org/) with Elm. Even if you're not interested in Phoenix and Elixir (though I certainly am!), it's a great on-ramp to Elm as well.
 
 The [Elm docs](http://elm-lang.org/docs) are a delight to read and go into exhaustive detail on what's available in all aspects of the language. Go here to find specifics on anything in the language.
 

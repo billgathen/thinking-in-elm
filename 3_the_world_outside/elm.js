@@ -11415,15 +11415,11 @@ Elm.Main.make = function (_elm) {
    outbox.signal);
    var NoOp = {ctor: "NoOp"};
    var log = F2(function (outbox,message) {
-      var sendMessageTask = A2($Signal.send,
-      outbox.address,
-      $Basics.toString(message));
-      var logAction = A2($Task.map,
-      function (n) {
+      return $Effects.task(A2($Task.map,
+      function (m) {
          return NoOp;
       },
-      sendMessageTask);
-      return $Effects.task(logAction);
+      A2($Signal.send,outbox.address,$Basics.toString(message))));
    });
    var Reset = {ctor: "Reset"};
    var Like = {ctor: "Like"};
