@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "A series of experiments exploring the Elm language",
-    "repository": "https://github.com/billgathen/elm-step-by-step.git",
+    "repository": "https://github.com/billgathen/thinking-in-elm.git",
     "license": "BSD3",
     "source-directories": [
         "."

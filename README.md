@@ -18,7 +18,7 @@ To play with the examples on Linux/OSX machine:
 _NOTE: I don't have instructions for doing Elm development on Windows, but the commands should be similar._
 
 1. [Install Elm](http://elm-lang.org/install)
-1. `git clone https://github.com/billgathen/elm-step-by-step.git`
+1. `git clone https://github.com/billgathen/thinking-in-elm.git`
 
 Each project has been compiled, so to try the examples on your local machine, run this command in your terminal in the main directory for the example:
 
