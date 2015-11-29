@@ -13,7 +13,7 @@ import StartApp.Simple as StartApp
 initialModel = 0
 
 
--- Our complete set of valid actions: separate different options with a pipe |
+-- All valid actions: separate different options with a pipe |
 type Action = Like | Reset
 
 

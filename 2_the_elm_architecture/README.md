@@ -12,7 +12,7 @@ The Elm Architecture is built around a model-update-view flow. What does that me
 
 Everything is about supporting a `model`. A model is a single data structure that contains all the state for your application: the values of fields, whether things are visible, etc. The Architecture is dedicated to maintaining that state in a maintainable, bug-resistant manner.
 
-The `update` function is about changing the model in response to actions that take place in the app's world: a button click, typing into a text field, getting a response back from an ajax call. It is the *only* place in the app where the model can change. Data in Elm is immutable, so even if we went crazy and tried to update the model somewhere else in the program, Elm wouldn't permit it. This constraint is terrific for maintainability.
+The `update` function is about changing the model in response to actions that take place in the app's world: a button click, typing into a text field, getting a response back from an ajax call. It is the *only* place in the app where the model can change. Data in Elm is immutable, so even if we went crazy and tried to update the model somewhere else in the program, Elm wouldn't permit it. This constraint is terrific for maintainability, since there's nothing more frustrating than finding out a variable you depend on was changed in a function that seems completely-unrelated, far off in another part of your program.
 
 The `view` function is about displaying the model to the user: typically by generating HTML that can be supplied to the user's browser.
 

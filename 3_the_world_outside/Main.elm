@@ -70,7 +70,7 @@ app =
     { init = initModel
     , update = updateWithLogging
     , view = view
-    , inputs = [ jsLikesActions ] -- External signals that we want to affect our app!
+    , inputs = [ jsLikesActions ]
     }
 
   
