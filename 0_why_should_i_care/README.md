@@ -15,7 +15,7 @@
 1. Modular
 1. Blazing Fast
 1. One-Way Data Flow ("The Elm Architecture")
-1. <whisper>Monads</whisper>
+1. &lt;whisper&gt;Monads&lt;/whisper&gt;
 
 ## Ok, but what is it?
 
@@ -31,4 +31,4 @@ Elm is a descendant of Haskell, so unless you have experience in Haskell, some o
 
 Elm is still pretty new: not all the libraries you're used to in JavaScript have pure-Elm versions, though you should be able to integrate the two for the time being.
 
-It's not particularly-compact in terms of generated JavaScript, though this may improve in the future. The Elm runtime is included in every Elm program, and even for a simple ["Hello World" app](../1_hello_world) the elm.js file is ~11,000 lines and 279K uncompressed. I'm still not clear whether Elm plays nicely with standard minify/compress solutions: UglifyJS dropped the file size from to 178K minified and 170K compressed.
+It's not particularly-compact in terms of generated JavaScript, though this may improve in the future. The Elm runtime is included in every Elm program, and even for a simple ["Hello World" app](../1_hello_world) the elm.js file is ~11,000 lines and 279K uncompressed. I'm still not clear whether Elm plays nicely with standard minify/compress solutions, but UglifyJS dropped the file size from to 178K minified and 170K compressed.
