@@ -1,5 +1,5 @@
-# elm-step-by-step
-A series of experiments exploring the Elm language and how it can play nice with JavaScript. To try Elm without installing it on your machine (as well as seeing a bunch of examples) check out [Try Elm](http://elm-lang.org/try)!
+# Thinking in Elm
+A series of experiments exploring how to think using the Elm programming language and how it can play nice with JavaScript. To try Elm without installing it on your machine (as well as seeing a bunch of examples) check out [Try Elm](http://elm-lang.org/try)!
 
 This is not intended as an "Elm 101": I gloss over most of the syntax details to focus on how to *think* about Elm applications, in particular the Elm Architecture and JavaScript interop. The [Elm docs](http://elm-lang.org/docs) are a good place to start if you're learning the language from scratch. Either read them through beforehand or use them as a reference when you see a bit of syntax you don't understand.
 
