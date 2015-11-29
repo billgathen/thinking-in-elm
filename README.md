@@ -5,7 +5,8 @@ This is not intended as an "Elm 101": I gloss over most of the syntax details to
 
 ## The Steps
 
-1. [Hello World](1_hello_world/)
+1. [Why Should I Care About Elm?](0_why_should_i_care)
+1. [Hello World](1_hello_world)
 1. [The Elm Architecture](2_the_elm_architecture)
 1. [The World Outside](3_the_world_outside)
 1. [Going Deeper](4_going_deeper)
