@@ -13,7 +13,7 @@ import StartApp
 initialLikes = 0
 
 
-initModel =
+initialModel =
   ( initialLikes
   , Effects.none
   )
@@ -41,7 +41,7 @@ update log action model =
 
 log outbox message =
   Signal.send outbox.address (toString message)
-  |> Task.map (\m -> NoOp)
+  |> Task.map (\t -> NoOp)
   |> Effects.task
     
 
@@ -67,7 +67,7 @@ updateWithLogging =
 
 app =
   StartApp.start
-    { init = initModel
+    { init = initialModel
     , update = updateWithLogging
     , view = view
     , inputs = [ jsLikesActions ]
