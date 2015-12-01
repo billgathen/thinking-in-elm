@@ -40,6 +40,8 @@ In the `log` function we see an example of Elm's pipeline syntax. the `|>` takes
 
 The `log` function starts by defining the behavior we want (sending a stringified version of the number of likes to the outbox signal). `Signal.send` returns a `Task`, which is an asynchronous unit of work similar to a JavaScript Promise. Unfortunately, when the Task executes it returns an empty tuple. In order to feed it back into the `update` function, we use `Task.map` to convert that useless return value into a `NoOp` action, which `update` will happily consume. The last step is to convert the Task into an Effect using the `Effects.task` function.
 
+Wrapping a Task in an Effect is like wrapping a letter (the Task) in an envelope (the Effect) which allows it to flow through the postal system. At its destination, we rip open the envelope and read the letter inside. When we hand back a list of Effects to StartApp, it knows how to process them via a dedicated port and return the result back to the update function as an action.
+
 It's important to note that `Signal.send` is not actually called at this point: we are defining the behavior we want, but it won't be executed until after the view is processed and StartApp runs the Effects flow.
 
 The `Signal` we're sending the message to is called `outbox` and it is a `Mailbox`, which is a special signal with an `address` function that accepts inputs. Mailboxes allow us to explicitly send data into a Signal chain. Whatever is sent to the `address` function is emitted to whichever signals are chained behind it. The definition of `outbox` shows that we initialize the signal with an empty string.
