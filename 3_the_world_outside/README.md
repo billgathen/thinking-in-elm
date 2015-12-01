@@ -58,11 +58,11 @@ Note that Elm does not execute JavaScript code and JavaScript does not execute E
 
 Back inside `Main.elm`, let's see how the `jsLikes` port brings that "Like" string back into the Elm flow. 
 
-Incoming ports don't need a body, just a declaration that defines what type of data they will receive. Incoming ports automatically create a signal of the same name that emits new values whenever the port receives a message from JavaScript.
+Incoming ports don't need a body, just a [type annotation](http://elm-lang.org/guide/model-the-problem#contracts) that defines what type of data they can pass. Incoming ports automatically create a signal of the same name that emits new values whenever the port receives a message from JavaScript.
 
 However, the `jsLikes` signal emits strings, not actions. The `jsLikesActions` signal listens to the `jsLikes` signal and uses `Signal.map` to replace whatever comes in from the port with a `Like` action. In this example, we don't care about the actual value passed back by jsLikes, but if we did, we could include it in our Action and `update` would receive it just like any other action.
 
-The final piece to the puzzle is a new argument to `StartApp.start`: the `inputs` array. This contains any signals that we want routed into the model-update-view workflow, so we add the jsLikesActions signal here. Anything emitted by the signals in this list will be dropped directly into the `update` function as the action, which is why we needed to convert the signal's return value from a string to a `Like` action beforehand.
+The final piece to the puzzle is a new argument to `StartApp.start`: the `inputs` array. This contains any signals that we want routed into the model-update-view workflow, so we add the jsLikesActions signal here. Anything emitted by the signals in this list will be dropped directly into the `update` function as an action, which is why we needed to convert the signal's return value from a string to a `Like` action beforehand.
 
 ## Type Annotations
 
