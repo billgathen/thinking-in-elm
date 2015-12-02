@@ -15,5 +15,7 @@ The [Elm docs](http://elm-lang.org/docs) are a delight to read and go into exhau
 
 The [Elm Architecture Tutorial](https://github.com/evancz/elm-architecture-tutorial) digs more into the details of how the model-update-view flow works, including making ajax calls with the [elm-http](https://github.com/evancz/elm-http) library. It is the definitive location for understanding the MUV approach, but some of it goes a bit quickly, which is why I created this repo as a sort of prerequisite.
 
+And of course, following [Evan Czaplicki](@czaplic) and the [Elm-lang](@elmlang) twitter feeds will keep you Elm-inspired on a daily basis. :)
+
 Enjoy Elm!
 
