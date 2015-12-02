@@ -18,6 +18,8 @@ The `view` function is about displaying the model to the user: typically by gene
 
 ## The Flow of an Elm Application
 
+The diagrams in the slides [on my website](http://billgathen.com/thinking-in-elm.pdf) are very helpful in visualizing this flow: highly-recommend you check them out.
+
 When your app is first loaded into a web page, the model is set into an initial state. Our code example is a "Like" page, so the model is simply an integer that stores the number of likes. Our initial state will be a zero.
 
 Next, the model is passed into the view function, which generates HTML from the data. That HTML is sent to the user. The user is now viewing your page.

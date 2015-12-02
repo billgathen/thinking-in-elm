@@ -30,6 +30,8 @@ Let's walk through the Effects flow in both directions to see how this happens.
 
 ## The Effects Flow (Outgoing)
 
+The diagrams in the slides [on my website](http://billgathen.com/thinking-in-elm.pdf) are very helpful in visualizing these flows: highly-recommend you check them out.
+
 To log our actions out to JavaScript, we want to add a `log` hook to our `update` function, which will wrap the Effect-creation logic. The problem is, the standard `StartApp.start` function takes an `update` argument that expects exactly two arguments (an action and a model), but adding the log would create a function that takes three args. What to do?
 
 To get the hook, we [partially-apply](https://en.wikipedia.org/wiki/Partial_application) the `update` function when we supply it to `StartApp.start`. This stores the logger (which is also partially-applied) in a single-argument form that we can call easily from inside the `update` function.

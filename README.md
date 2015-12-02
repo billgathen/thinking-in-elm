@@ -11,6 +11,12 @@ This is not intended as an "Elm 101": I gloss over most of the syntax details to
 1. [The World Outside](3_the_world_outside)
 1. [Going Deeper](4_going_deeper)
 
+## The Slides
+
+The slides for the presentation that drove this can be downloaded in PDF [on my website](http://billgathen.com/thinking-in-elm.pdf).
+
+It's just 2 diagrams, but they're very helpful for visualizing the flows in the [Elm Architecture](2_the_elm_architecture) and the [World Outside](3_the_world_outside) sections.
+
 ## Playing with the examples
 
 To play with the examples on Linux/OSX machine:
