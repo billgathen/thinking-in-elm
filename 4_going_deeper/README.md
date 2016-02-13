@@ -15,7 +15,16 @@ The [Elm docs](http://elm-lang.org/docs) are a delight to read and go into exhau
 
 The [Elm Architecture Tutorial](https://github.com/evancz/elm-architecture-tutorial) digs more into the details of how the model-update-view flow works, including making ajax calls with the [elm-http](https://github.com/evancz/elm-http) library. It is the definitive location for understanding the MUV approach, but some of it goes a bit quickly, which is why I created this repo as a sort of prerequisite.
 
-And of course, following [Evan Czaplicki](@czaplic) and the [Elm-lang](@elmlang) twitter feeds will keep you Elm-inspired on a daily basis. :)
+For some audio/visual inspiration, Evan Czaplicki and Richard Feldman have done presentations and guested on podcasts discussing Elm. Spend an afternoon going through them to get fired-up about the possibilities of Elm:
+
+- [Changelog 191 - "Elm and Functional Programming with Richard Feldman"](https://changelog.com/191/)
+- [Richard Feldman - "Effects as Data"](https://youtu.be/6EdXaWfoslc?list=PLkRkpi23D7EWvlUhLqzeA1BWOEs6x9DMZ)
+- [Richard Feldman - "Make the Back-End Team Jealous: Elm in Production"](https://youtu.be/FV0DXNB94NE?list=PLAABP4LiVkD26dSQakyQLe4_a1WUh37uW)
+- [Evan Czaplicki - "Let's be mainstream! User focused design in Elm"](https://youtu.be/oYk8CKH7OhE?list=PLjwsJzdHncC6SZrRJ7D8z2v5WJZKk8TuK)
+- [Ruby Rogues 212 - "RR Elm with Richard Feldman and Evan Czaplicki"](https://devchat.tv/ruby-rogues/212-rr-elm-with-richard-feldman-and-evan-czaplicki)
+- [JavaScript Jabber 175 - "JSJ Elm with Evan Czaplicki and Richard Feldman"](https://devchat.tv/js-jabber/175-jsj-elm-with-evan-czaplicki-and-richard-feldman)
+
+And of course, following [Evan Czaplicki](@czaplic), [Richard Feldman](@rtfeldman) and the [Elm-lang](@elmlang) twitter feeds will keep you Elm-inspired on a daily basis. :)
 
 Enjoy Elm!
 
